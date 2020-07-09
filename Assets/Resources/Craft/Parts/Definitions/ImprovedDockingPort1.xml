@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Part name="Improved Docking Port">
+  <PartType id="ImprovedDockingPort1" includeInBodyDrag="true" name="Improved Docking Port" prefabPath="Craft/Parts/Prefabs/DockingPort1.prefab" mass="200" price="50000" partCollisions="Default" defaultMaterials="0,1,2,3,4" subpartsSharePartStyle="false" stylesShareHeader="false">
+    <Modifiers>
+      <Config autoActivateIfNoStageOrActivationGroup="true" buoyancyBaseScale="0" buoyancyUserScale="1" centerOfMass="0,0,0" collisionDisconnectImpulse="2000" collisionDisconnectVelocity="30" collisionExplodeImpulse="4000" collisionExplodeVelocity="60" collisionPreventExternalDisconnections="false" collisionVelocityMode="NormalOnly" dragScale="1" fuelLine="false" heatShield="0" includeInDrag="true" inertiaTensorBaseScale="1" inertiaTensorMin="0.05" inertiaTensorUserScale="1" massScale="1" maxDamage="100" maxTemperature="1500" partCollisionHandling="Default" partCollisionResponse="Default" partScale="1,1,1" preventDebris="true" raiseWaterEventsEvenIfNotBuoyant="false" stageActivationType="None" supportsActivation="true" thermalMassRatio="1" inspectorEnabled="false" partPropertiesEnabled="true" staticPriceAndMass="false" />
+      <ImprovedDockingPort inspectorEnabled="false" partPropertiesEnabled="false" staticPriceAndMass="false" />
+    </Modifiers>
+    <AttachPoints>
+      <AttachPoint name="AttachPoint1" position="0,-0.0715,0" rotation="90,180,0" allowRotation="true" allowInvertedConnection="false" canReceive="true" canSeek="true" ignoreSurfaces="false" />
+      <AttachPoint name="DockingAttachPoint" position="0,0.0716,0" rotation="270,180,0" allowRotation="false" allowInvertedConnection="false" canReceive="true" canSeek="true" ignoreSurfaces="true" jointType="Rigid" />
+    </AttachPoints>
+    <SubpartTypes>
+      <SubpartType index="0" xmlName="" displayName="Part" />
+    </SubpartTypes>
+  </PartType>
+  <DesignerParts>
+    <DesignerPart name="Improved Docking Port" category="Gizmos" description="Like the stock Docking Port, but lets you dock two ports already connected to the same ship." order="700" showInDesigner="true" iconType="Resource" iconPath="Assets/Content/Craft/Parts/DesignerParts/icon.png" snapshotDistanceScaler="1" snapshotRotation="0,0,0">
+      <Assembly>
+        <Parts>
+          <Part id="1" partType="ImprovedDockingPort1" position="0,0,0" rotation="0,0,0">
+            <Config />
+            <ImprovedDockingPort />
+          </Part>
+        </Parts>
+      </Assembly>
+    </DesignerPart>
+  </DesignerParts>
+  <PartStyles>
+    <SubpartStyles subpartIndex="0">
+      <Style id="Default" displayName="Default">
+        <TextureStyles>
+          <TextureStyle id="DockingPort1" />
+        </TextureStyles>
+      </Style>
+    </SubpartStyles>
+  </PartStyles>
+</Part>
