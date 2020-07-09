@@ -26,32 +26,5 @@ namespace Assets.Scripts
         /// </summary>
         /// <value>The singleton instance of the mod object.</value>
         public static Mod Instance { get; } = GetModInstance<Mod>();
-
-        public override void OnModLoaded() {
-            base.OnModLoaded();
-
-            var success=
-                this.TryLoadAsset("Assets/Content/Craft/Parts/DesignerParts/icon") ||
-                this.TryLoadAsset("Assets/Content/Craft/Parts/DesignerParts/icon.png") ||
-                this.TryLoadAsset("Content/Craft/Parts/DesignerParts/icon") ||
-                this.TryLoadAsset("Content/Craft/Parts/DesignerParts/icon.png") ||
-                this.TryLoadAsset("Craft/Parts/DesignerParts/icon") ||
-                this.TryLoadAsset("Craft/Parts/DesignerParts/icon.png");
-
-            if (!success) {
-                Debug.Log("Shite!");
-            }
-        }
-
-        private Boolean TryLoadAsset(String asset) {
-            if (this.ResourceLoader.LoadAsset<Sprite>(asset) != null) {
-                Debug.Log($"Hooray! {asset}");
-                return true;
-            } else {
-                Debug.Log($"Nope: {asset}");
-                return false;
-            }
-        }
-
     }
 }
